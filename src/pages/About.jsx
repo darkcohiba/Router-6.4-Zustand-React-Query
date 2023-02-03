@@ -48,13 +48,8 @@ function About() {
     // console.log(serverError)
     console.log(isLoading)
 
-    // setTimeout(()=>{
-    //     alert(joke.delivery)
-    // },2000)
-    
     return ( 
         <div>
-            <Header />
             <h1>About Page</h1>
             {joke === undefined ? null :<p>{joke.setup}</p>}
             <h1>...</h1>
@@ -63,7 +58,6 @@ function About() {
             {/* {setTimeout(()=>{
                 {joke === undefined ? null :<p>{joke.delivery}</p>}
             },2000)} */}
-            <Footer />
         </div>
     );
 }

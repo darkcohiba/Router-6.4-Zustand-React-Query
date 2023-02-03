@@ -10,14 +10,17 @@ import './App.css'
 import Home from './pages/Home';
 import About from './pages/About';
 import Help from './pages/Help';
+import Contact from './pages/Contact';
+import RootLayout from './layouts/RootLayout';
 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route path="/" element={<RootLayout />}>
       <Route index element={< Home />} />
       <Route path='about' element={< About />} />
       <Route path='help' element={< Help />} />
+      <Route path='contact' element={< Contact />} />
     </Route>
   )
 )
