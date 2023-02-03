@@ -1,0 +1,34 @@
+import { useState } from 'react'
+import {
+  createBrowserRouter,
+  Route,
+  createRoutesFromElements,
+  RouterProvider
+} from 'react-router-dom'
+import reactLogo from './assets/react.svg'
+import './App.css'
+import Home from './pages/Home';
+import About from './pages/About';
+import Help from './pages/Help';
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route>
+      <Route index element={< Home />} />
+      <Route path='about' element={< About />} />
+      <Route path='help' element={< Help />} />
+    </Route>
+  )
+)
+
+function App() {
+
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  )
+}
+
+export default App
