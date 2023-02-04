@@ -4,23 +4,37 @@ import useStore from '../hooks/store'
 
 
 export default function Contact() {
-    const { user, setUserName } = useStore()
+    const { users, addUser } = useStore()
+
+    const username = users[0]
+    console.log(users)
+
 
     function onSubmit(e){
         e.preventDefault()
-        setUserName(e.target["username"].value)
+        addUser(e.target["username"].value)
         console.log(e.target["username"].value)
+        console.log(username)
     }
 
 
     return ( 
         <div>
             <h1>Contact Page</h1>
-            <p>Update your Username below</p>
+            <p>Login with your own Username below</p>
             <form onSubmit={onSubmit}>
                 <label>Username: </label>
-                <input type="text" name="username" placeholder={user.username}></input>
+                <input type="text" name="username" placeholder={username}></input>
             </form>
+            <div id="userList">
+                <p>Active User List</p>
+                {users.map((user)=>{
+                    return(
+                        <p>Username: {user}</p>
+                    )
+                    
+                })}
+            </div>
         </div>
     );
 }

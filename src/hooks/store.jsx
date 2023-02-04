@@ -8,9 +8,14 @@ const useStore = create((set) => ({
     removeAllBears: () => set({ bears: 0 }),
 
     //user state
-    user: {username: "DarkCohiba"},
-    setUserName: () => set((text) => ({ username: text}))
+    users: ["DarkCohiba"],
+    addUser: (user) => set((state)=> ({
+        users: [user, ...state.users]
+    })),
+    // username: "DarkCohiba",
+    // setUserName: (username) => set((state) => ({ username: username}))
     // setUserName: (user) => set({ username: text })
+
 }))
 
 export default useStore

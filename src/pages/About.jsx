@@ -44,9 +44,9 @@ function About() {
     
     
     
-    console.log(joke)
+    // console.log(joke)
     // console.log(serverError)
-    console.log(isLoading)
+    // console.log(isLoading)
 
     return ( 
         <div>

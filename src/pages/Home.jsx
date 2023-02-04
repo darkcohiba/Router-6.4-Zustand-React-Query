@@ -7,13 +7,12 @@ export default function Home() {
 
     const { bears, increasePopulation } = useStore()
 
-    console.log(bears)
     return (
         <div>
             <h1>Home Page</h1>
             <h3>Increasing Population</h3>
             <p>Population: {bears}</p>
-            <button onClick={increasePopulation}>Increase Population</button>
+            <button onClick={increasePopulation}>Increase Population of Bears!!</button>
         </div>
     );
 }
