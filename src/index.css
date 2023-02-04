@@ -117,6 +117,7 @@ footer{
 
 main {
   width: 100%;
+  min-height: 500px;
   margin: 40px auto;
   border: #bc4123 2px solid;
 }
