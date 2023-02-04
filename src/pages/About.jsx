@@ -9,7 +9,7 @@ function About() {
 
     const [url, setUrl] = useState("https://v2.jokeapi.dev/joke/Any")
 
-    const { data: joke, isLoading, isError} = useQuery({
+    const { data: joke, isLoading, isError, refetch} = useQuery({
                                     queryKey: ['joke'],
                                     queryFn: async () => {
                                     const response = await fetch(url)
@@ -51,9 +51,11 @@ function About() {
     return ( 
         <div>
             <h1>About Page</h1>
-            {joke === undefined ? null :<p>{joke.setup}</p>}
-            <h1>...</h1>
-            {joke === undefined ? null :<p>{joke.delivery}</p>}
+            {joke?.setup}
+            {/* {joke === undefined ? null :<p>{joke.setup}</p>} */}
+            <h1 onClick={refetch}>...</h1>
+            {joke?.delivery}
+            {/* {joke === undefined ? null :<p>{joke.delivery}</p>} */}
 
             {/* {setTimeout(()=>{
                 {joke === undefined ? null :<p>{joke.delivery}</p>}

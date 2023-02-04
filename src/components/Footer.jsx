@@ -6,7 +6,7 @@ function Footer() {
 
     const [url, setUrl] = useState("https://api.quotable.io/random")
 
-    const { data: quote, isLoading, isError} = useQuery({
+    const { data: quote, isLoading, isError, refetch} = useQuery({
         queryKey: ['joke'],
         queryFn: async () => {
         const response = await fetch(url)
@@ -21,9 +21,8 @@ function Footer() {
 
     return (
         <div>
-            <footer>
+            <footer onClick={refetch}>
             {quote === undefined ? null :<p>{quote.content}</p>}
-            <p>...</p>
             {quote === undefined ? null :<p>{quote.author}</p>}
             </footer>
         </div>
