@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useStore from '../hooks/store'
 
 function Header() {
-    const { users } = useStore()
+    const { users, bears } = useStore()
 
     const navigate = useNavigate()
     const username = users[0]
@@ -10,6 +10,7 @@ function Header() {
         <div>
             <nav>
                 <h1 onClick={()=>(navigate("/"))}>Hello {username}</h1>
+                {bears > 250 ? bears > 500 ? bears > 1000 ? bears > 2000 ? <h2 className="bear-warning">A bear is our president now!!</h2> : <h2 className="bear-warning">We are all fucked now!</h2>:<h2 className="bear-warning">the bears have over run the users</h2> : <h2 className="bear-warning">the bears will overrun the users soon!</h2> : null}
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="about">About</NavLink>
                 <NavLink to="contact">Contact</NavLink>

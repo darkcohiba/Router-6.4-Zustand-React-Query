@@ -5,14 +5,14 @@ import useStore from '../hooks/store'
 
 export default function Home() {
 
-    const { bears, increasePopulation } = useStore()
+    const { bears, increasePopulationByOne } = useStore()
 
     return (
         <div>
             <h1>Home Page</h1>
             <h3>Increasing Population</h3>
             <p>Population: {bears}</p>
-            <button onClick={increasePopulation}>Increase Population of Bears!!</button>
+            <button onClick={increasePopulationByOne}>Increase Population of Bears!!</button>
         </div>
     );
 }
