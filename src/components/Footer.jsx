@@ -30,3 +30,22 @@ function Footer() {
 }
 
 export default Footer;
+
+
+
+
+function findMatch(driversArray, input){
+    return match = driversArray.filter(
+        (driver) => driver.toLowerCase() === input.toLowerCase()
+    )
+}
+
+
+
+function fuzzyMatch(driversArray, input){
+    return match = driversArray.filter(
+        (driver) => driver.toLowerCase().indexOf(input.toLowerCase()) === 0
+    )
+}
+
+fuzzyMatch(driversArray, "s")
