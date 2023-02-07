@@ -1,11 +1,11 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import useStore from '../hooks/store'
+import useBearStore from '../hooks/bearStore'
 
 
 export default function Home() {
 
-    const { bears, increasePopulationByOne } = useStore()
+    const { bears, increasePopulationByOne } = useBearStore()
 
     return (
         <div>

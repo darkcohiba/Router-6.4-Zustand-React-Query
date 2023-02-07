@@ -1,8 +1,11 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import useStore from '../hooks/store'
+import useBearStore from '../hooks/bearStore'
+import useUserStore from '../hooks/userStore'
+
 
 function Header() {
-    const { users, bears } = useStore()
+    const { bears } = useBearStore()
+    const { users } = useUserStore()
 
     const navigate = useNavigate()
     const username = users[0]

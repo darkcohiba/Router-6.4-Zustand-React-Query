@@ -1,10 +1,10 @@
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import useStore from '../hooks/store'
+import useUserStore from '../hooks/userStore'
 
 
 export default function Contact() {
-    const { users, addUser } = useStore()
+    const { users, addUser } = useUserStore()
 
     const username = users[0]
     console.log(users)
