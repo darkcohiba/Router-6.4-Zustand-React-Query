@@ -12,6 +12,8 @@ import About from './pages/About';
 import Help from './pages/Help';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
+import Form from './pages/Form';
+
 
 import RootLayout from './layouts/RootLayout';
 
@@ -24,6 +26,7 @@ const router = createBrowserRouter(
       <Route path='help' element={< Help />} />
       <Route path='contact' element={< Contact />} />
       <Route path='cart' element={< Cart />} />
+      <Route path='form' element={< Form />} />
     </Route>
   )
 )

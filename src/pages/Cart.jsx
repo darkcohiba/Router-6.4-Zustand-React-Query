@@ -12,8 +12,11 @@ function Cart() {
     return (
         <div>
             <p>current cart number: {cart}</p>
-            <form onSubmit={(e)=>
-                setCart(e.target.cartid.value)}>
+            <form onSubmit={(e)=>{
+                e.preventDefault();
+                setCart(parseInt(e.target.cartid.value))
+                }
+                }>
                 {/* no async issue but I should add a prevent default! */}
                 <label>Update the Cart Number:</label>
                 <input type="number" name="cartid" placeholder={cart}></input>

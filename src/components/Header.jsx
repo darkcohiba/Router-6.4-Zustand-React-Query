@@ -19,6 +19,8 @@ function Header() {
                 <NavLink to="contact">Contact</NavLink>
                 <NavLink to="help">Help</NavLink>
                 <NavLink to="cart">Cart</NavLink>
+                <NavLink to="form">Form</NavLink>
+
             </nav>
         </div>
     );

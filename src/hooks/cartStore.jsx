@@ -9,9 +9,10 @@ const cartStore = (set) => ({
     cart: 0,
     setCart: (cartID) => {
         set((state) => ({
-          cart: cartID,
-        }))}
-    // setCart: (state) => set({ bears: state }),
+            cart: cartID,
+        }))},
+    increaseCartByOne: () => set((state) => ({ cart: state.cart + 1 })),
+
 })
 
 const useCartStore = create(

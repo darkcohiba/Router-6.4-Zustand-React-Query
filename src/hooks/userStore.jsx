@@ -4,7 +4,7 @@ import {devtools, persist} from 'zustand/middleware'
 
 const userStore = (set) => ({
     //user state
-    users: ["DarkCohiba"],
+    users: [],
     addUser: (user) => set((state)=> ({
         users: [user, ...state.users]
     })),
