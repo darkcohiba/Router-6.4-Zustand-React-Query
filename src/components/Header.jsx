@@ -18,6 +18,7 @@ function Header() {
                 <NavLink to="about">About</NavLink>
                 <NavLink to="contact">Contact</NavLink>
                 <NavLink to="help">Help</NavLink>
+                <NavLink to="cart">Cart</NavLink>
             </nav>
         </div>
     );
