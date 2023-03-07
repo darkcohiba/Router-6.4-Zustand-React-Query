@@ -13,8 +13,6 @@ export default function Contact() {
     function onSubmit(e){
         e.preventDefault()
         addUser(e.target["username"].value)
-        console.log(e.target["username"].value)
-        console.log(username)
     }
 
 

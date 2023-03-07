@@ -1,7 +1,5 @@
 import { create } from 'zustand';
 import {devtools, persist} from 'zustand/middleware'
-
-
 const userStore = (set) => ({
     //user state
     users: [],
@@ -9,7 +7,6 @@ const userStore = (set) => ({
         users: [user, ...state.users]
     })),
 })
-
 const useUserStore = create(
     devtools(
         persist(userStore, {
@@ -17,7 +14,5 @@ const useUserStore = create(
         })
     )
 )
-
-
 export default useUserStore;
 
