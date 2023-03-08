@@ -17,7 +17,7 @@ import Form from './pages/Form';
 
 import RootLayout from './layouts/RootLayout';
 
-
+//creates our routes and then we pass them into the RouterProvider
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
