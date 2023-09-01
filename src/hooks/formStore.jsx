@@ -8,9 +8,12 @@ const formStore = (set) => ({
     addForm: (key, value) => set((state)=> ({
         form: {
             ...state.form,
-            key : value
-        }
+            [key] : value
+        },
+
     })),
+    clearForm: () => set({ form: {} }),  // Clear form data
+
 })
 
 const useFormStore = create(

@@ -6,8 +6,8 @@ import useUserStore from '../hooks/userStore'
 export default function Contact() {
     const { users, addUser } = useUserStore()
 
-    const username = users[0]
-    console.log(users)
+    // const username = users[0]
+    // console.log(users)
 
 
     function onSubmit(e){
@@ -22,7 +22,7 @@ export default function Contact() {
             <p>Login with your own Username below</p>
             <form onSubmit={onSubmit}>
                 <label>Username: </label>
-                <input type="text" name="username" placeholder={username}></input>
+                <input type="text" name="username" placeholder={users[0]}></input>
             </form>
             <div id="userList">
                 <p>Active User List</p>
