@@ -7,7 +7,7 @@ import useFetch from "../hooks/useFetchHook"
 
 function About() {
 
-    const [url, setUrl] = useState("https://v2.jokeapi.dev/joke/Any")
+    const [url, setUrl] = useState("https://opentdb.com/api.php?amount=1")
 
     const { data: joke, isLoading, isError, refetch} = useQuery({
                                     queryKey: ['joke'],
@@ -47,14 +47,16 @@ function About() {
     // console.log(joke)
     // console.log(serverError)
     // console.log(isLoading)
-
+                                console.log(joke)
     return ( 
         <div>
             <h1>About Page</h1>
-            {joke?.setup}
+            <p>Question</p>
+            {joke?.results[0].question}
             {/* {joke === undefined ? null :<p>{joke.setup}</p>} */}
             <h1 onClick={refetch}>...</h1>
-            {joke?.delivery}
+            <p>Answer</p>
+            {joke?.results[0].correct_answer}
             {/* {joke === undefined ? null :<p>{joke.delivery}</p>} */}
 
             {/* {setTimeout(()=>{
