@@ -20,6 +20,9 @@ function Header() {
                 <NavLink to="help">Help</NavLink>
                 <NavLink to="cart">Cart</NavLink>
                 <NavLink to="form">Form</NavLink>
+                <NavLink to="items">Items</NavLink>
+                <NavLink to="itemsPage">Items Page</NavLink>
+
 
             </nav>
         </div>

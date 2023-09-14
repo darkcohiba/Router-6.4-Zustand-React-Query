@@ -13,9 +13,9 @@ import Help from './pages/Help';
 import Contact from './pages/Contact';
 import Cart from './pages/Cart';
 import Form from './pages/Form';
-
-
 import RootLayout from './layouts/RootLayout';
+import ItemsPage from './pages/ItemsPage';
+import ItemsView from './pages/ItemsView';
 
 //creates our routes and then we pass them into the RouterProvider
 const router = createBrowserRouter(
@@ -27,6 +27,10 @@ const router = createBrowserRouter(
       <Route path='contact' element={< Contact />} />
       <Route path='cart' element={< Cart />} />
       <Route path='form' element={< Form />} />
+      <Route path='items' element={<ItemsPage  />} />
+      <Route path='items' element={<ItemsPage  />} />
+      <Route path='itemsPage' element={<ItemsView  />} />
+
     </Route>
   )
 )
